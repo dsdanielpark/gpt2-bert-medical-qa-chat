@@ -13,6 +13,18 @@ Data was gathered at the 5th of May 2017.
 
 
 
+# References
+[1] https://arxiv.org/abs/1706.03762 <br>
+[2] https://arxiv.org/abs/1810.04805 <br>
+[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
+[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
+[5] https://github.com/ash3n/DocProduct#start-of-content <br>
+[6] https://appliedaicourse.com <br>
+[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
+[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
+[9] Hugging Face GPT2 https://huggingface.co/gpt2
+
+
 # Cites
 
 ```BibTex
@@ -25,14 +37,3 @@ Data was gathered at the 5th of May 2017.
 	publisher    = { Hugging Face }
 }
 ```
-
-# References
-[1] https://arxiv.org/abs/1706.03762 <br>
-[2] https://arxiv.org/abs/1810.04805 <br>
-[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
-[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
-[5] https://github.com/ash3n/DocProduct#start-of-content <br>
-[6] https://appliedaicourse.com <br>
-[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
-[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] Hugging Face GPT2 https://huggingface.co/gpt2
