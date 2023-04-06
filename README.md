@@ -12,12 +12,12 @@ Data was gathered at the 5th of May 2017.
 
 # Pretrained Models
 
-Hugging face model
+Hugging face pretrained models
 - chatgpt2 pretrained model https://huggingface.co/danielpark/medical-QA-chatGPT2-v1
 - chatgpt2 tokenizer https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1
 - bio0redditbert pretrained model https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1
 
-TF model for extracting context from QA
+TensorFlow models for extracting context from QA
 I temporarily share TensorFlow model weights through my personal Google Drive.
 - Q extractor https://drive.google.com/drive/folders/1VjljBW_HXXIXoh0u2Y1anPCveQCj9vnQ?usp=share_link
 - A extractor https://drive.google.com/drive/folders/1iZ6jCiZPqjsNOyVoHcagEf3hDC5H181j?usp=share_link
