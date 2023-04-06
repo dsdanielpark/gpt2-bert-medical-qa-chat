@@ -2,14 +2,14 @@
 [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-blue.svg)](code_of_conduct.md)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-blue)
 
-> **Be careful when cloning this repository**: It contains large NLP model weight. (>0.3GB, [`git-lfs`](https://git-lfs.com/)) <br>
+> **Be careful when cloning this repository**: It contains large NLP model weight. (>0.45GB, [`git-lfs`](https://git-lfs.com/)) <br>
 > If you want to clone without git-lfs, use this command before `git clone`.
 ```
 git lfs install --skip-smudge &
 export GIT_LFS_SKIP_SMUDGE=1
 ```
  
- Since the emergence of chat GPT-4, many things have changed. However, chat GPT-2 and chat GPT-3 can still be applied sufficiently in specific domains as large-scale auto-regressive natural language processing models. This repository is designed to qualitatively compare the performance of chat GPT-2 and chat GPT-4 that have been fine-tuned in the medical domain, and to estimate the resources and costs required to catch up with the performance of chat GPT-4 through chat GPT-2 fine-tuning. It also aims to verify how well specific up-to-date information can be updated and applied. Although it is a few years behind GPT-4, the ultimate goal of this repository is to minimize the cost and resources required to update and obtain usable weights after acquiring the weights. We plan to devise some experiments for few-shot learning of large-scale natural language processing models and test existing research. This repository is for research and practice purposes only and is not responsible for any use.
+  Since the emergence of chat GPT-4, many things have changed. However, chat GPT-2 and chat GPT-3 can still be applied sufficiently in specific domains as large-scale auto-regressive natural language processing models. This repository is designed to qualitatively compare the performance of chat GPT-2 and chat GPT-4 that have been fine-tuned in the medical domain, and to estimate the resources and costs required to catch up with the performance of chat GPT-4 through chat GPT-2 fine-tuning. It also aims to verify how well specific up-to-date information can be updated and applied. Although it is a few years behind GPT-4, the ultimate goal of this repository is to minimize the cost and resources required to update and obtain usable weights after acquiring the weights. We plan to devise some experiments for few-shot learning of large-scale natural language processing models and test existing research. This repository is for research and practice purposes only and is not responsible for any use.
 
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.gif)
 
