@@ -71,7 +71,7 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
       primaryClass={cs.CL}
 }
 ```
-
+<br>
 
 # Tips
 The MQuAD provides embedded question and answer arrays in string format, so it is recommended to convert the string-formatted arrays into float format as follows. This measure has been applied to save resources and time used for embedding.
