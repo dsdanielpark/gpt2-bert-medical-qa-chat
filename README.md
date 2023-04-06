@@ -1,5 +1,8 @@
 # GPT-BERT Medical QA Chatbot
 
+
+<br>
+
 # Quick Start
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
@@ -38,8 +41,6 @@ Medical Q/A datasets gathered from the following websites.
 - Question Doctors
 - WebMD
 Data was gathered at the 5th of May 2017.
-
-
 
 <br>
 
