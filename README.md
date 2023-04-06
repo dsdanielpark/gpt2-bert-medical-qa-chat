@@ -1,15 +1,20 @@
 # GPT-BERT Medical QA Chatbot
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.png)
+
 
 <br>
 
 # Quick Start
+You can chat with the chatbot through the command-line interface using the following command.
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 python main.py
 ```
+
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.png)
+
+<br>
 
 `Pre-trained model weight needed`
 Downloading datasets and model weights through the Hugging Face Hub is executed, but for some TensorFlow models, you need to manually download and place them at the top of the project folder. The information for the downloadable model is as follows, and you can visit my Hugging Face repository to check it. <br>
