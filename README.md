@@ -1,4 +1,4 @@
-# medical-QA-chatbot-GPT-with-BERT
+# Medical-QA-Chatbot-GPT-with-BERT
 Implementation and distribution of medical chatbot through gpt2 fine-tuning
 
 # Dataset
@@ -9,6 +9,8 @@ medical Q/A datasets gathered from the following websites
 - Question Doctors
 - WebMD
 Data was gathered at the 5th of May 2017.
+
+# Pretrained Models
 
 
 
