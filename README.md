@@ -1,5 +1,5 @@
 # GPT-BERT Medical QA Chatbot
-Implementation and distribution of medical chatbot through gpt2 fine-tuning
+
 
 # Dataset
 medical Q/A datasets gathered from the following websites
@@ -13,14 +13,14 @@ Data was gathered at the 5th of May 2017.
 # Pretrained Models
 
 Hugging face pretrained models
-- chatgpt2 pretrained model https://huggingface.co/danielpark/medical-QA-chatGPT2-v1
-- chatgpt2 tokenizer https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1
-- bio0redditbert pretrained model https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1
+- chatgpt2 pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-v1)
+- chatgpt2 tokenizer [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1)
+- bio0redditbert pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1)
 
 TensorFlow models for extracting context from QA
 I temporarily share TensorFlow model weights through my personal Google Drive.
-- Q extractor https://drive.google.com/drive/folders/1VjljBW_HXXIXoh0u2Y1anPCveQCj9vnQ?usp=share_link
-- A extractor https://drive.google.com/drive/folders/1iZ6jCiZPqjsNOyVoHcagEf3hDC5H181j?usp=share_link
+- Q extractor [[download]](https://drive.google.com/drive/folders/1VjljBW_HXXIXoh0u2Y1anPCveQCj9vnQ?usp=share_link)
+- A extractor [[download]](https://drive.google.com/drive/folders/1iZ6jCiZPqjsNOyVoHcagEf3hDC5H181j?usp=share_link)
 
 
 
@@ -34,9 +34,10 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 [6] https://appliedaicourse.com <br>
 [7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
 [8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] Hugging Face GPT2 https://huggingface.co/gpt2
-[10] Stream it for demo https://github.com/AI-Yash/st-chat
-[11] Streamit https://streamlit.io/
+[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
+[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
+[11] Streamit https://streamlit.io/ <br>
+
 # Cites
 
 ```BibTex
