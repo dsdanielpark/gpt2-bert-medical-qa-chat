@@ -5,6 +5,7 @@
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot.git
 pip install -e .
+python main.py
 ```
 
 `Pre-trained model weight needed`
