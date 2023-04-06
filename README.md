@@ -112,8 +112,8 @@ qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
 [5] https://github.com/ash3n/DocProduct#start-of-content <br>
 [6] https://appliedaicourse.com <br>
 [7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
-[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
-[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
-[11] Streamit https://streamlit.io/ <br>
+[8] https://github.com/LasseRegin/medical-question-answer-data <br>
+[9] https://huggingface.co/gpt2 <br>
+[10] https://github.com/AI-Yash/st-chat <br>
+[11] https://streamlit.io/ <br>
 
