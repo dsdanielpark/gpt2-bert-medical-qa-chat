@@ -116,4 +116,4 @@ qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
 [9] https://huggingface.co/gpt2 <br>
 [10] https://github.com/AI-Yash/st-chat <br>
 [11] https://streamlit.io/ <br>
-
+[12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker
