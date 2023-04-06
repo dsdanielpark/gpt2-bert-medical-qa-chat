@@ -1,5 +1,5 @@
 # GPT-BERT Medical QA Chatbot
-
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.gif)
 
 <br>
 
