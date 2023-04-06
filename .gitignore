@@ -1,8 +1,8 @@
 /notebook
-/asset
+
 /doc
 /notebook/*
-question_extractor_model_v1
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
