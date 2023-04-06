@@ -4,7 +4,7 @@
 <br>
 
 # Dataset
-The Medical Question and Answering dataset(MQuAD) has been refined, including the following datasets. You can download it through the Hugging Face dataset. Use the DATASETS method as follows. You can find more infomation at [[here]](https://huggingface.co/datasets/danielpark/MQuAD-v1)
+The Medical Question and Answering dataset(MQuAD) has been refined, including the following datasets. You can download it through the Hugging Face dataset. Use the DATASETS method as follows. You can find more infomation at [here.](https://huggingface.co/datasets/danielpark/MQuAD-v1)
 
 ```python
 from datasets import load_dataset
