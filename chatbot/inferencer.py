@@ -36,7 +36,7 @@ class Inferencer:
     truncated_question=preprocessed_question
     if question_len>500:
       truncated_question=' '.join(preprocessed_question.split(' ')[:500])
-    encoded_question= self.biobert_tokenizer.encode(truncated_question, truncation=True, max_length=1000)
+    encoded_question= self.biobert_tokenizer.encode(truncated_question)
     max_length=512
     padded_question=tf.keras.preprocessing.sequence.pad_sequences(
         [encoded_question], maxlen=max_length, padding='post')
@@ -60,10 +60,11 @@ class Inferencer:
   def eval_func(self, question, answer):
     print(f'Q for eval func: {question}')
     print(f'A for eval func: {answer}')
-    answer_len=self.answer_len
+    answer_len=20
     generated_answer=self.get_gpt_answer(question, answer_len)
     reference = [answer.split(' ')]
     candidate = generated_answer.split(' ')
+    print(f"C for eval func: {candidate}")
     score = sentence_bleu(reference, candidate)
         
     bleu_1gram = sentence_bleu(reference, candidate, weights=(1, 0, 0, 0))
