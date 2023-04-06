@@ -6,7 +6,7 @@
 # Quick Start
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
-cd GPT-BERT-Medical-QA-Chatbot.git
+cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 python main.py
 ```
