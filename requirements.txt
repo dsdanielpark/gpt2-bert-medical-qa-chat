@@ -77,6 +77,7 @@ semver==3.0.0
 six==1.16.0
 smmap==5.0.0
 streamlit==1.20.0
+streamlit-chat==0.0.2.2
 tensorboard==2.10.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
