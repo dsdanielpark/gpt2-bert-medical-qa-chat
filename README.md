@@ -71,3 +71,25 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
       primaryClass={cs.CL}
 }
 ```
+
+
+# Tips
+The MQuAD provides embedded question and answer arrays in string format, so it is recommended to convert the string-formatted arrays into float format as follows. This measure has been applied to save resources and time used for embedding.
+
+```python
+from datasets import load_dataset
+import pandas as pd
+import numpy as np
+
+qa = load_dataset("danielpark/MQuAD-v1", "csv")
+qa = pd.DataFrame(qa['train'])
+
+def convert(item):
+    item = item.strip()  
+    item = item[1:-1]   
+    item = np.fromstring(item, sep=' ') 
+    return item
+
+qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
+qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
+```
