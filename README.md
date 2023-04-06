@@ -1,5 +1,11 @@
 # GPT-BERT Medical QA Chatbot
 
+# Quick Start
+```
+git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
+cd GPT-BERT-Medical-QA-Chatbot.git
+pip install -e .
+```
 
 <br>
 
