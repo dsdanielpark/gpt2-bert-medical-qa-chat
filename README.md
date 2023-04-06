@@ -24,9 +24,9 @@ Data was gathered at the 5th of May 2017.
 
 # Pretrained Models
 Hugging face pretrained models
-- chatgpt2 pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-v1)
-- chatgpt2 tokenizer [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1)
-- bio redditbert pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1)
+- GPT2 pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-v1)
+- GPT2 tokenizer [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1)
+- BIO Reddit BERT pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1)
 
 TensorFlow models for extracting context from QA.
 I temporarily share TensorFlow model weights through my personal Google Drive.
