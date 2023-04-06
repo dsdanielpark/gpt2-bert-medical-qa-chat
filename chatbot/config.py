@@ -1,5 +1,3 @@
-
-
 class Config:
     chat_params = {"gpt_tok":"danielpark/medical-QA-chatGPT2-tok-v1",
                    "tf_gpt_model":"danielpark/medical-QA-chatGPT2-v1",
