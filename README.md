@@ -36,21 +36,6 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 
 <br>
 
-# References
-[1] https://arxiv.org/abs/1706.03762 <br>
-[2] https://arxiv.org/abs/1810.04805 <br>
-[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
-[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
-[5] https://github.com/ash3n/DocProduct#start-of-content <br>
-[6] https://appliedaicourse.com <br>
-[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
-[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
-[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
-[11] Streamit https://streamlit.io/ <br>
-
-<br>
-
 # Cites
 ```BibTex
 @misc {hf_canonical_model_maintainers_2022,
@@ -93,3 +78,20 @@ def convert(item):
 qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
 qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
 ```
+
+
+<br>
+
+# References
+[1] https://arxiv.org/abs/1706.03762 <br>
+[2] https://arxiv.org/abs/1810.04805 <br>
+[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
+[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
+[5] https://github.com/ash3n/DocProduct#start-of-content <br>
+[6] https://appliedaicourse.com <br>
+[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
+[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
+[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
+[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
+[11] Streamit https://streamlit.io/ <br>
+
