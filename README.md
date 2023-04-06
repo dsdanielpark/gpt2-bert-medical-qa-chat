@@ -1,4 +1,4 @@
-# medical-QA-chatbot-GPT2
+# medical-QA-chatbot-GPT-with-BERT
 Implementation and distribution of medical chatbot through gpt2 fine-tuning
 
 # Dataset
