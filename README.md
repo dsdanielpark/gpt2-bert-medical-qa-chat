@@ -7,6 +7,18 @@ cd GPT-BERT-Medical-QA-Chatbot.git
 pip install -e .
 ```
 
+`Pre-trained model weight needed`
+Downloading datasets and model weights through the Hugging Face Hub is executed, but for some TensorFlow models, you need to manually download and place them at the top of the project folder.
+```
+class Config:
+    chat_params = {"gpt_tok":"danielpark/medical-QA-chatGPT2-tok-v1",
+                   "tf_gpt_model":"danielpark/medical-QA-chatGPT2-v1",
+                   "bert_tok":"danielpark/medical-QA-BioRedditBERT-uncased-v1",
+                   "tf_q_extractor": "question_extractor_model_v1",
+                   "data":"danielpark/MQuAD-v1",
+                   "max_answer_len": 20,
+                   "isEval": False}
+```
 <br>
 
 # Dataset
