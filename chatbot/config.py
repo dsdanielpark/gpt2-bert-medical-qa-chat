@@ -7,4 +7,4 @@ class Config:
                    "tf_q_extractor": "question_extractor_model_v1",
                    "data":"danielpark/MQuAD-v1",
                    "max_answer_len": 20,
-                   "isEval": False}
+                   "isEval": True}
