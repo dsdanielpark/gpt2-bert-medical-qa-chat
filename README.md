@@ -4,13 +4,21 @@
 <br>
 
 # Dataset
-medical Q/A datasets gathered from the following websites
+The Medical Question and Answering dataset(MQuAD) has been refined, including the following datasets. You can download it through the Hugging Face dataset. Use the DATASETS method as follows. You can find more infomation at [here.](https://huggingface.co/datasets/danielpark/MQuAD-v1)
 
+```python
+from datasets import load_dataset
+dataset = load_dataset("danielpark/MQuAD-v1")
+```
+
+Medical Q/A datasets gathered from the following websites.
 - eHealth Forum
 - iCliniq
 - Question Doctors
 - WebMD
 Data was gathered at the 5th of May 2017.
+
+
 
 <br>
 
@@ -25,21 +33,6 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 - Q extractor [[download]](https://drive.google.com/drive/folders/1VjljBW_HXXIXoh0u2Y1anPCveQCj9vnQ?usp=share_link)
 - A extractor [[download]](https://drive.google.com/drive/folders/1iZ6jCiZPqjsNOyVoHcagEf3hDC5H181j?usp=share_link)
 
-
-<br>
-
-# References
-[1] https://arxiv.org/abs/1706.03762 <br>
-[2] https://arxiv.org/abs/1810.04805 <br>
-[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
-[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
-[5] https://github.com/ash3n/DocProduct#start-of-content <br>
-[6] https://appliedaicourse.com <br>
-[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
-[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
-[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
-[11] Streamit https://streamlit.io/ <br>
 
 <br>
 
@@ -63,3 +56,42 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
       primaryClass={cs.CL}
 }
 ```
+<br>
+
+# Tips
+The MQuAD provides embedded question and answer arrays in string format, so it is recommended to convert the string-formatted arrays into float format as follows. This measure has been applied to save resources and time used for embedding.
+
+```python
+from datasets import load_dataset
+import pandas as pd
+import numpy as np
+
+qa = load_dataset("danielpark/MQuAD-v1", "csv")
+qa = pd.DataFrame(qa['train'])
+
+def convert(item):
+    item = item.strip()  
+    item = item[1:-1]   
+    item = np.fromstring(item, sep=' ') 
+    return item
+
+qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
+qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
+```
+
+
+<br>
+
+# References
+[1] https://arxiv.org/abs/1706.03762 <br>
+[2] https://arxiv.org/abs/1810.04805 <br>
+[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
+[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
+[5] https://github.com/ash3n/DocProduct#start-of-content <br>
+[6] https://appliedaicourse.com <br>
+[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
+[8] Dataset https://github.com/LasseRegin/medical-question-answer-data <br>
+[9] Hugging Face GPT2 https://huggingface.co/gpt2 <br>
+[10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
+[11] Streamit https://streamlit.io/ <br>
+
