@@ -1,6 +1,8 @@
 # GPT-BERT Medical QA Chatbot
 
 
+<br>
+
 # Dataset
 medical Q/A datasets gathered from the following websites
 
@@ -10,20 +12,21 @@ medical Q/A datasets gathered from the following websites
 - WebMD
 Data was gathered at the 5th of May 2017.
 
-# Pretrained Models
+<br>
 
+# Pretrained Models
 Hugging face pretrained models
 - chatgpt2 pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-v1)
 - chatgpt2 tokenizer [[download]](https://huggingface.co/danielpark/medical-QA-chatGPT2-tok-v1)
 - bio0redditbert pretrained model [[download]](https://huggingface.co/danielpark/medical-QA-BioRedditBERT-uncased-v1)
 
-TensorFlow models for extracting context from QA
+TensorFlow models for extracting context from QA.
 I temporarily share TensorFlow model weights through my personal Google Drive.
 - Q extractor [[download]](https://drive.google.com/drive/folders/1VjljBW_HXXIXoh0u2Y1anPCveQCj9vnQ?usp=share_link)
 - A extractor [[download]](https://drive.google.com/drive/folders/1iZ6jCiZPqjsNOyVoHcagEf3hDC5H181j?usp=share_link)
 
 
-
+<br>
 
 # References
 [1] https://arxiv.org/abs/1706.03762 <br>
@@ -38,8 +41,9 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 [10] Stream it for demo https://github.com/AI-Yash/st-chat <br>
 [11] Streamit https://streamlit.io/ <br>
 
-# Cites
+<br>
 
+# Cites
 ```BibTex
 @misc {hf_canonical_model_maintainers_2022,
 	author       = { {HF Canonical Model Maintainers} },
