@@ -1,4 +1,16 @@
 # GPT-BERT Medical QA Chatbot
+[![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-blue.svg)](code_of_conduct.md)
+![Code convention](https://img.shields.io/badge/code%20convention-pep8-blue)
+
+> **Be careful when cloning this repository**: It contains large NLP model weight. (>0.3GB, [`git-lfs`](https://git-lfs.com/)) <br>
+> If you want to clone without git-lfs, use this command before `git clone`.
+```
+git lfs install --skip-smudge &
+export GIT_LFS_SKIP_SMUDGE=1
+```
+ 
+
+
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.gif)
 
 <br>
