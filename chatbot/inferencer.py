@@ -65,6 +65,19 @@ class Inferencer:
     reference = [answer.split(' ')]
     candidate = generated_answer.split(' ')
     score = sentence_bleu(reference, candidate)
+        
+    bleu_1gram = sentence_bleu(reference, candidate, weights=(1, 0, 0, 0))
+    bleu_2gram = sentence_bleu(reference, candidate, weights=(0, 1, 0, 0))
+    bleu_3gram = sentence_bleu(reference, candidate, weights=(0, 0, 1, 0))
+    bleu_4gram = sentence_bleu(reference, candidate, weights=(0, 0, 0, 1))
+
+    print(f'reference: {reference}')
+    print(f'candidate: {candidate}')
+    print(f'1-Gram BLEU: {bleu_1gram:.2f}')
+    print(f'2-Gram BLEU: {bleu_2gram:.2f}')
+    print(f'3-Gram BLEU: {bleu_3gram:.2f}')
+    print(f'4-Gram BLEU: {bleu_4gram:.2f}')
+    
     return score
   
   def run(self, question, isEval):
