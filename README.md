@@ -38,4 +38,13 @@ Data was gathered at the 5th of May 2017.
 	doi          = { 10.57967/hf/0039 },
 	publisher    = { Hugging Face }
 }
+
+@misc{vaswani2017attention,
+      title={Attention Is All You Need}, 
+      author={Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+      year={2017},
+      eprint={1706.03762},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
