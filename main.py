@@ -1,8 +1,8 @@
 import tensorflow as tf
 from transformers import GPT2Tokenizer,TFGPT2LMHeadModel, AutoTokenizer, TFAutoModel
-from modules.chatbot.inferencer import Inferencer
-from modules.chatbot.dataloader import convert, get_bert_index, get_dataset
-from modules.chatbot.config import Config as CONF
+from module.chatbot.inferencer import Inferencer
+from module.chatbot.dataloader import convert, get_bert_index, get_dataset
+from module.chatbot.config import Config as CONF
 from colorama import Fore, Back, Style
 import warnings
 import logging
