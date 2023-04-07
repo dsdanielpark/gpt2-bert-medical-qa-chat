@@ -12,6 +12,7 @@ export GIT_LFS_SKIP_SMUDGE=1
 Since the advent of Chat GPT-4, there have been significant changes in the field. Nevertheless, Chat GPT-2 and Chat GPT-3 continue to be effective in specific domains as large-scale auto-regressive natural language processing models. This repository aims to qualitatively compare the performance of Chat GPT-2 and Chat GPT-4 in the medical domain, and estimate the resources and costs needed for Chat GPT-2 fine-tuning to reach the performance level of Chat GPT-4. Additionally, it seeks to assess how well up-to-date information can be incorporated and applied.
 
 Although a few years behind GPT-4, the ultimate goal of this repository is to minimize costs and resources required for updating and obtaining usable weights after acquiring them. We plan to design experiments for few-shot learning in large-scale natural language processing models and test existing research. Please note that this repository is intended for research and practice purposes only, and we do not assume responsibility for any usage.
+Additionally, this repository ultimately aims to achieve similar qualitative and quantitative performance as GPT-4 in certain domain areas through model lightweighting and optimization. For more details, please refer to my technical blog.
 
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/asset/medichatbot.gif)
 
