@@ -140,6 +140,9 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
 [4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
 [5] https://github.com/ash3n/DocProduct#start-of-content <br>
+
+<details>
+<summary> See more...</summary>
 [6] https://appliedaicourse.com <br>
 [7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
 [8] https://github.com/LasseRegin/medical-question-answer-data <br>
@@ -148,3 +151,5 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [11] https://streamlit.io/ <br>
 [12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
+
+</details>
