@@ -111,13 +111,11 @@ The MQuAD provides embedded question and answer arrays in string format, so it i
 
 ```python
 from datasets import load_dataset
-from utilfunction.astyper import col_convert
+from utilfunction import col_convert
 import pandas as pd
-
 
 qa = load_dataset("danielpark/MQuAD-v1", "csv")
 df_qa = pd.DataFrame(qa['train'])
-
 df_qa = col_convert(df_qa, ['Q_FFNN_embeds', 'A_FFNN_embeds'])
 ```
 
