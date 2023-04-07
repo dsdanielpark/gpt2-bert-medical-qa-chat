@@ -1,6 +1,8 @@
 # GPT-BERT Medical QA Chatbot
-[![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-blue.svg)](code_of_conduct.md)
-![Code convention](https://img.shields.io/badge/code%20convention-pep8-blue)
+[![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
+[![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
+![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
+![Black Fomatter](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 > **Be careful when cloning this repository**: It contains large NLP model weight. (>0.45GB, [`git-lfs`](https://git-lfs.com/)) <br>
 > If you want to clone without git-lfs, use this command before `git clone`.
@@ -143,5 +145,5 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [9] https://huggingface.co/gpt2 <br>
 [10] https://github.com/AI-Yash/st-chat <br>
 [11] https://streamlit.io/ <br>
-[12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker
+[12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
