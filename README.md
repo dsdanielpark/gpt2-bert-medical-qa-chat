@@ -116,7 +116,7 @@ from utilfunction import col_converter
 qa = load_dataset("danielpark/MQuAD-v1", "csv")
 df_qa = pd.DataFrame(qa['train'])
 
-df_qa = col_converter(df, ['Q_FFNN_embeds', 'A_FFNN_embeds']
+df_qa = col_converter(df, ['Q_FFNN_embeds', 'A_FFNN_embeds'])
 ```
 
 ## About Tensorflow-GPU handling
