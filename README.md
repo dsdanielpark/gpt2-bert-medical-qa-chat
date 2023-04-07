@@ -5,7 +5,7 @@
 ![Black Fomatter](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 > **Be careful when cloning this repository**: It contains large NLP model weight. (>0.45GB, [`git-lfs`](https://git-lfs.com/)) <br>
-> If you want to clone without git-lfs, use this command before `git clone`.
+> If you want to clone without git-lfs, use this command before `git clone`. *The bandwidth provided by git-lfs for free is only 1GB per month, so there is almost no chance that a 0.45GB git-lfs download will work. So please download it manually.*
 ```
 git lfs install --skip-smudge &
 export GIT_LFS_SKIP_SMUDGE=1
@@ -22,6 +22,7 @@ Additionally, this repository ultimately aims to achieve similar qualitative and
 <br>
 
 # Quick Start
+## Using CLI
 You can chat with the chatbot through the command-line interface using the following command.
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
@@ -110,20 +111,12 @@ The MQuAD provides embedded question and answer arrays in string format, so it i
 
 ```python
 from datasets import load_dataset
+from utilfunction import col_convert
 import pandas as pd
-import numpy as np
 
 qa = load_dataset("danielpark/MQuAD-v1", "csv")
-qa = pd.DataFrame(qa['train'])
-
-def convert(item):
-    item = item.strip()  
-    item = item[1:-1]   
-    item = np.fromstring(item, sep=' ') 
-    return item
-
-qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
-qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
+df_qa = pd.DataFrame(qa['train'])
+df_qa = col_convert(df_qa, ['Q_FFNN_embeds', 'A_FFNN_embeds'])
 ```
 
 ## About Tensorflow-GPU handling
@@ -139,6 +132,9 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
 [4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
 [5] https://github.com/ash3n/DocProduct#start-of-content <br>
+
+<details>
+<summary> See more...</summary>
 [6] https://appliedaicourse.com <br>
 [7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
 [8] https://github.com/LasseRegin/medical-question-answer-data <br>
@@ -147,3 +143,5 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [11] https://streamlit.io/ <br>
 [12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
+
+</details>
