@@ -5,7 +5,7 @@
 ![Black Fomatter](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 > **Be careful when cloning this repository**: It contains large NLP model weight. (>0.45GB, [`git-lfs`](https://git-lfs.com/)) <br>
-> If you want to clone without git-lfs, use this command before `git clone`. The bandwidth provided by git-lfs for free is not 1GB per month, so there is almost no chance that a 0.45GB git-lfs download will work. So please download it manually.
+> If you want to clone without git-lfs, use this command before `git clone`. *The bandwidth provided by git-lfs for free is not 1GB per month, so there is almost no chance that a 0.45GB git-lfs download will work. So please download it manually.*
 ```
 git lfs install --skip-smudge &
 export GIT_LFS_SKIP_SMUDGE=1
