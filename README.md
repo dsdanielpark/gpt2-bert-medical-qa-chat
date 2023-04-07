@@ -84,21 +84,21 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 # Cites
 ```BibTex
 @misc {hf_canonical_model_maintainers_2022,
-	author       = { {HF Canonical Model Maintainers} },
-	title        = { gpt2 (Revision 909a290) },
-	year         = 2022,
-	url          = { https://huggingface.co/gpt2 },
-	doi          = { 10.57967/hf/0039 },
-	publisher    = { Hugging Face }
+        author       = { {HF Canonical Model Maintainers} },
+        title        = { gpt2 (Revision 909a290) },
+        year         = 2022,
+        url          = { https://huggingface.co/gpt2 },
+        doi          = { 10.57967/hf/0039 },
+        publisher    = { Hugging Face }
 }
 
 @misc{vaswani2017attention,
-      title={Attention Is All You Need}, 
-      author={Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
-      year={2017},
-      eprint={1706.03762},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      title = {Attention Is All You Need}, 
+      author = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+      year = {2017},
+      eprint = {1706.03762},
+      archivePrefix = {arXiv},
+      primaryClass = {cs.CL}
 }
 ```
 <br>
