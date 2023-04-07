@@ -2,9 +2,9 @@ import streamlit as st
 from streamlit_chat import message
 import tensorflow as tf
 from transformers import GPT2Tokenizer,TFGPT2LMHeadModel, AutoTokenizer, TFAutoModel
-from chatbot.inferencer import Inferencer
-from chatbot.dataloader import convert, get_bert_index, get_dataset
-from chatbot.config import Config as CONF
+from modules.chatbot.inferencer import Inferencer
+from modules.chatbot.dataloader import convert, get_bert_index, get_dataset
+from modules.chatbot.config import Config as CONF
 from colorama import Fore, Back, Style
 import warnings
 import logging
@@ -16,16 +16,6 @@ import math
 import pandas as pd
 import streamlit as st
 
-"""
-# Welcome to Streamlit!
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
 
 with st.echo(code_location='below'):
    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
