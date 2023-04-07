@@ -111,20 +111,12 @@ The MQuAD provides embedded question and answer arrays in string format, so it i
 
 ```python
 from datasets import load_dataset
-import pandas as pd
-import numpy as np
+from utilfunction import col_converter
 
 qa = load_dataset("danielpark/MQuAD-v1", "csv")
-qa = pd.DataFrame(qa['train'])
+df_qa = pd.DataFrame(qa['train'])
 
-def convert(item):
-    item = item.strip()  
-    item = item[1:-1]   
-    item = np.fromstring(item, sep=' ') 
-    return item
-
-qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
-qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
+df_qa = col_converter(df, ['Q_FFNN_embeds', 'A_FFNN_embeds']
 ```
 
 ## About Tensorflow-GPU handling
