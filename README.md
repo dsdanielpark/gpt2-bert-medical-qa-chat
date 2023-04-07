@@ -102,6 +102,8 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 <br>
 
 # Tips
+
+## About data handling
 The MQuAD provides embedded question and answer arrays in string format, so it is recommended to convert the string-formatted arrays into float format as follows. This measure has been applied to save resources and time used for embedding.
 
 ```python
@@ -122,6 +124,10 @@ qa['Q_FFNN_embeds'] = qa['Q_FFNN_embeds'].apply(convert)
 qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
 ```
 
+## About Tensorflow-GPU handling
+Since the nvidia GPU driver fully supports wsl2, the method of supporting TensorFlow's gpu has changed. Please refer to the following pages to install it.
+- https://docs.nvidia.com/cuda/wsl-user-guide/index.html
+- https://www.tensorflow.org/install/pip?hl=ko
 
 <br>
 
@@ -138,3 +144,4 @@ qa['A_FFNN_embeds'] = qa['A_FFNN_embeds'].apply(convert)
 [10] https://github.com/AI-Yash/st-chat <br>
 [11] https://streamlit.io/ <br>
 [12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker
+[13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
