@@ -37,7 +37,7 @@ python main.py
 `Pre-trained model weight needed`
 Downloading datasets and model weights through the Hugging Face Hub is executed, but for some TensorFlow models, you need to manually download and place them at the top of the project folder. The information for the downloadable model is as follows, and you can visit my Hugging Face repository to check it. <br>
 <br>
-`chatbot/config.py`
+`modules/chatbot/config.py`
 ```python
 class Config:
     chat_params = {"gpt_tok":"danielpark/medical-QA-chatGPT2-tok-v1",
