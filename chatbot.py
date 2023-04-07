@@ -52,7 +52,10 @@ with st.echo(code_location='below'):
 gpt2_tokenizer=GPT2Tokenizer.from_pretrained(CONF.chat_params['gpt_tok'])
 medi_qa_chatGPT2=TFGPT2LMHeadModel.from_pretrained(CONF.chat_params['tf_gpt_model'])
 biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params['bert_tok'])
-question_extractor_model_v1=tf.keras.models.load_model(CONF.chat_params['tf_q_extractor'])
+try:
+    question_extractor_model_v1=tf.keras.models.load_model(CONF.chat_params['tf_q_extractor'])
+except Exception as e:
+    print(e)
 df_qa = get_dataset(CONF.chat_params['data'])
 max_answer_len = CONF.chat_params['max_answer_len']
 isEval = CONF.chat_params['isEval']
