@@ -22,6 +22,7 @@ Additionally, this repository ultimately aims to achieve similar qualitative and
 <br>
 
 # Quick Start
+## Using CLI
 You can chat with the chatbot through the command-line interface using the following command.
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
