@@ -54,9 +54,9 @@ cd GPT-BERT-Medical-QA-Chatbot
 
 docker compose up
 ```
-Free distribution through streamlit is subject to resource limitations, so please excuse us for not providing it.
-
 <br>
+
+###### Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.
 
 `Pre-trained model weight needed`
 Downloading datasets and model weights through the Hugging Face Hub is executed, but for some TensorFlow models, you need to manually download and place them at the top of the project folder. The information for the downloadable model is as follows, and you can visit my Hugging Face repository to check it. <br>
