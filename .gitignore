@@ -1,9 +1,9 @@
 /notebooks
-/modules
-/assets
-/docs
+
+
+
 /notebooks/*
-/scripts
+
 
 
 # Byte-compiled / optimized / DLL files
