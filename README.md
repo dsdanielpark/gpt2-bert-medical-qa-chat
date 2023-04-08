@@ -58,7 +58,7 @@ cd GPT-BERT-Medical-QA-Chatbot
 docker build -t chatgpt .
 docker run -p 8501:8501 -v '/usr/src/app/data' chatgpt    # There is no cost to pay for git-lfs, just download and mount it.
 ```
-##### Since git clone downloads what needs to be downloaded from git-lfs, the volume must be mounted as follows. Or modify chatbot/config.py to mount to a different folder.
+##### Since git clone downloads what needs to be downloaded from git-lfs, the volume must be mounted as follows. Or modify `chatbot/config.py` to mount to a different folder.
 
 ## Build From Docker Compose
 You can also implement it in a docker container like this: <br>
