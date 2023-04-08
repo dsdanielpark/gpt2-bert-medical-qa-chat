@@ -80,6 +80,7 @@ http://localhost:8501/
 
 ###### Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.
 
+## Pre-trained model infomation
 `Pre-trained model weight needed`
 Downloading datasets and model weights through the Hugging Face Hub is executed, but for some TensorFlow models, you need to manually download and place them at the top of the project folder. The information for the downloadable model is as follows, and you can visit my Hugging Face repository to check it. <br>
 <br>
@@ -89,11 +90,15 @@ class Config:
     chat_params = {"gpt_tok":"danielpark/medical-QA-chatGPT2-tok-v1",
                    "tf_gpt_model":"danielpark/medical-QA-chatGPT2-v1",
                    "bert_tok":"danielpark/medical-QA-BioRedditBERT-uncased-v1",
-                   "tf_q_extractor": "question_extractor_model_v1",
+                   "tf_q_extractor": "question_extractor_model",
                    "data":"danielpark/MQuAD-v1",
                    "max_answer_len": 20,
-                   "isEval": False}
+                   "isEval": False,
+                   "runDocker":True, # Exceeds the bandwidth of git-lfs, mounts to local storage to find folder location for free use. I use the python utifunction package.
+                   "container_mounted_folder_path": "/usr/src/app/data"} 
 ```
+
+<br>
 
 # Dataset
 The Medical Question and Answering dataset(MQuAD) has been refined, including the following datasets. You can download it through the Hugging Face dataset. Use the DATASETS method as follows. You can find more infomation at [here.](https://huggingface.co/datasets/danielpark/MQuAD-v1)
