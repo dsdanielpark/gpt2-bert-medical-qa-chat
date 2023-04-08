@@ -6,5 +6,5 @@ class Config:
                    "data":"danielpark/MQuAD-v1",
                    "max_answer_len": 20,
                    "isEval": False,
-                   "runDocker":True,
-                   "container_mounted_folder_path": "/usr/src/app/data"}
+                   "runDocker":True, # Exceeds the bandwidth of git-lfs, mounts to local storage to find folder location for free use. I use the python utifunction package.
+                   "container_mounted_folder_path": "/usr/src/app/data"} 
