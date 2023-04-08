@@ -35,8 +35,6 @@ python main.py
 
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/medichatbot.png)
 
-<br>
-
 ## Streamlit application
 A simple application can be implemented with streamlit as follows:
 ```
