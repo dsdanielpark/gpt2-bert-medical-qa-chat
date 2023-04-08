@@ -33,6 +33,7 @@ cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 python main.py
 ```
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot.png)
 
 <br>
 
@@ -45,7 +46,7 @@ cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 streamlit run chatbot.py
 ```
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png)
+<!-- ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png) -->
 
 ## Docker
 You can also implement it in a docker container like this: <br>
