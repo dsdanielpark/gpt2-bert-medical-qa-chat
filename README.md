@@ -57,7 +57,7 @@ Docker version 20.10.24, build 297e128
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
 docker build -t chatgpt .
-docker run -p 8501:8501 --mount './:/usr/src/app/data' chatgpt    # There is no cost to pay for git-lfs, just download and mount it.
+docker run -p 8501:8501 -v ${PWD}/:/usr/src/app/data chatgpt     # There is no cost to pay for git-lfs, just download and mount it.
 ```
 ##### Since git clone downloads what needs to be downloaded from git-lfs, the volume must be mounted as follows. Or modify `chatbot/config.py` to mount to a different folder.
 
