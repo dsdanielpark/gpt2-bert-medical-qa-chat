@@ -39,7 +39,7 @@ python main.py
 
 ## Streamlit application
 A simple application can be implemented with streamlit as follows: <br>
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit2.gif)
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit_app2.gif)
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
