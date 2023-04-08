@@ -1,5 +1,5 @@
 from nltk.translate.bleu_score import sentence_bleu
-from module.chatbot.preprocessor import *
+from modules.chatbot.preprocessor import *
 import tensorflow as tf
 import numpy as np
 
