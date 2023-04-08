@@ -24,7 +24,7 @@ Additionally, this repository ultimately aims to achieve similar qualitative and
 <br>
 
 # Quick Start
-## Using CLI
+## Command-Line Interface
 You can chat with the chatbot through the command-line interface using the following command.
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
@@ -34,6 +34,27 @@ python main.py
 ```
 
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/medichatbot.png)
+
+<br>
+
+## Streamlit application
+A simple application can be implemented with streamlit as follows:
+```
+git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
+cd GPT-BERT-Medical-QA-Chatbot
+pip install -e .
+streamlit run chatbot.py
+```
+
+## Docker
+You can also implement it in a docker container like this: <br>
+```
+git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
+cd GPT-BERT-Medical-QA-Chatbot
+
+docker compose up
+```
+Free distribution through streamlit is subject to resource limitations, so please excuse us for not providing it.
 
 <br>
 
@@ -51,7 +72,6 @@ class Config:
                    "max_answer_len": 20,
                    "isEval": False}
 ```
-<br>
 
 # Dataset
 The Medical Question and Answering dataset(MQuAD) has been refined, including the following datasets. You can download it through the Hugging Face dataset. Use the DATASETS method as follows. You can find more infomation at [here.](https://huggingface.co/datasets/danielpark/MQuAD-v1)
