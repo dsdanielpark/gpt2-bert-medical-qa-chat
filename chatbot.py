@@ -19,10 +19,13 @@ import streamlit as st
 from utilfunction import find_path
 
 """
-# Medical BERT-GPT chatbot pre-beta
-
+# Welcome to Medical GPT-BERT chatbot!
 """
 
+# Load the chatbot model
+gpt2_tokenizer=GPT2Tokenizer.from_pretrained(CONF.chat_params['gpt_tok'])
+medi_qa_chatGPT2=TFGPT2LMHeadModel.from_pretrained(CONF.chat_params['tf_gpt_model'])
+biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params['bert_tok'])
 
 try:
     if CONF.chat_params['runDocker']:
