@@ -5,4 +5,6 @@ class Config:
                    "tf_q_extractor": "question_extractor_model",
                    "data":"danielpark/MQuAD-v1",
                    "max_answer_len": 20,
-                   "isEval": False}
+                   "isEval": False,
+                   "runDocker":True,
+                   "container_mounted_folder_path": "/usr/src/app/data"}
