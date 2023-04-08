@@ -52,7 +52,7 @@ streamlit run chatbot.py
 Check Docker Hub: https://hub.docker.com/r/parkminwoo91/medical-chatgpt-streamlit-v1 <br>
 Docker version 20.10.24, build 297e128
 
-## Build From Docker Image
+## Build from Docker Image
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
@@ -61,7 +61,7 @@ docker run -p 8501:8501 -v ${PWD}/:/usr/src/app/data chatgpt     # There is no c
 ```
 ##### Since git clone downloads what needs to be downloaded from git-lfs, the volume must be mounted as follows. Or modify `chatbot/config.py` to mount to a different folder.
 
-## Build From Docker Compose
+## Build from Docker Compose
 You can also implement it in a docker container like this: <br>
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/docker_build.gif)
 ```
@@ -71,7 +71,7 @@ cd GPT-BERT-Medical-QA-Chatbot
 docker compose up
 ```
 
-## Build Docker Hub
+## Build from Docker Hub
 
 ```
 docker pull parkminwoo91/medical-chatgpt-streamlit-v1:latest
