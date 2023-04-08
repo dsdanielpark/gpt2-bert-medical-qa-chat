@@ -146,5 +146,6 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
 [14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/
+[15] https://blog.streamlit.io/common-app-problems-resource-limits/
 
 </details>
