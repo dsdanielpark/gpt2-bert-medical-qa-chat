@@ -48,7 +48,18 @@ streamlit run chatbot.py
 ```
 <!-- ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png) -->
 
-## Docker
+# Docker
+Check Docker Hub: https://hub.docker.com/r/parkminwoo91/medical-chatgpt-streamlit-v1
+
+## Build From Docker Image
+```
+git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
+cd GPT-BERT-Medical-QA-Chatbot
+docker build -t chatgpt .
+docker run -p 8501:8501 chatgpt --volume './:/usr/src/app/data'    # There is no cost to pay for git-lfs, just download and mount it.
+```
+
+## Build From Docker Compose
 You can also implement it in a docker container like this: <br>
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/docker_build.gif)
 ```
@@ -57,6 +68,15 @@ cd GPT-BERT-Medical-QA-Chatbot
 
 docker compose up
 ```
+
+## Build Docker Hub
+
+```
+docker pull parkminwoo91/medical-chatgpt-streamlit-v1:latest
+docker compose up
+```
+http://localhost:8501/
+
 ###### Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.
 
 `Pre-trained model weight needed`
@@ -168,5 +188,6 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
 [14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/
 [15] https://blog.streamlit.io/common-app-problems-resource-limits/
+[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6
 
 </details>
