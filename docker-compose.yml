@@ -1,0 +1,13 @@
+version: '1.0'
+
+services:
+  streamlit:
+    build:
+      dockerfile: dockerfile
+    ports:
+      - '8501:8501'
+    volumes:
+      - './:/usr/src/app/data:delegated'
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
