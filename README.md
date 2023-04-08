@@ -33,7 +33,6 @@ cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 python main.py
 ```
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot.png)
 
 <br>
 
