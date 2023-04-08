@@ -67,8 +67,10 @@ docker compose up
 ## Build Docker Hub
 
 ```
-
+docker pull parkminwoo91/medical-chatgpt-streamlit-v1:latest
+docker compose up
 ```
+http://localhost:8501/
 
 ###### Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.
 
