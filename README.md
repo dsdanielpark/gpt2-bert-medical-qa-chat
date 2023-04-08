@@ -217,9 +217,9 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [10] https://github.com/AI-Yash/st-chat <br>
 [11] https://streamlit.io/ <br>
 [12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
-[13] https://chatterbot.readthedocs.io/en/stable/logic/index.html
-[14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/
-[15] https://blog.streamlit.io/common-app-problems-resource-limits/
-[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6
+[13] https://chatterbot.readthedocs.io/en/stable/logic/index.html <br>
+[14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/ <br>
+[15] https://blog.streamlit.io/common-app-problems-resource-limits/ <br>
+[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6 <br>
 
 </details>
