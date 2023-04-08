@@ -48,7 +48,13 @@ streamlit run chatbot.py
 ```
 <!-- ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png) -->
 
-## Docker
+## Build From Docker Image
+```
+git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
+
+```
+
+## Build From Docker Compose
 You can also implement it in a docker container like this: <br>
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/docker_build.gif)
 ```
@@ -57,6 +63,13 @@ cd GPT-BERT-Medical-QA-Chatbot
 
 docker compose up
 ```
+
+## Build Docker Hub
+
+```
+
+```
+
 ###### Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.
 
 `Pre-trained model weight needed`
