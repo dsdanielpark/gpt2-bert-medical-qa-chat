@@ -1,7 +1,7 @@
 version: '1.0'
 
 services:
-  streamlit:
+  app:
     build:
       dockerfile: dockerfile
     ports:
@@ -11,3 +11,5 @@ services:
     environment:
       - USER_ID=1000
       - GROUP_ID=1000
+
+    image: parkminwoo91/medical-chatgpt-streamlit-v1:latest
