@@ -12,6 +12,7 @@ warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.CRITICAL)
 from collections import namedtuple
 import altair as alt
+import os
 import math
 import pandas as pd
 import streamlit as st
@@ -53,6 +54,11 @@ with st.echo(code_location='below'):
 gpt2_tokenizer=GPT2Tokenizer.from_pretrained(CONF.chat_params['gpt_tok'])
 medi_qa_chatGPT2=TFGPT2LMHeadModel.from_pretrained(CONF.chat_params['tf_gpt_model'])
 biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params['bert_tok'])
+
+print(os.getcwd())
+tf_q_extractor_path = find_path("./", "folder", "question_extractor_model")
+question_extractor_model_v1=tf.keras.models.load_model(tf_q_extractor_path[0])
+
 try:
     question_extractor_model_v1=tf.keras.models.load_model(CONF.chat_params['tf_q_extractor'])
 except Exception as e:
