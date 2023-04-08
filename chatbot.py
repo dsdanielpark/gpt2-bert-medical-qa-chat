@@ -7,7 +7,10 @@ from modules.chatbot.dataloader import get_bert_index, get_dataset
 from modules.chatbot.config import Config as CONF
 from utilfunction import find_path
 
-# Load the chatbot model
+# Streamlit App
+st.header("GPT-BERT-Medical-QA-Chatbot")
+
+
 gpt2_tokenizer=GPT2Tokenizer.from_pretrained(CONF.chat_params['gpt_tok'])
 medi_qa_chatGPT2=TFGPT2LMHeadModel.from_pretrained(CONF.chat_params['tf_gpt_model'])
 biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params['bert_tok'])
@@ -19,7 +22,7 @@ isEval = CONF.chat_params['isEval']
 answer_index = get_bert_index(df_qa, 'A_FFNN_embeds')
 
 # using cache decorator
-@st.cache
+@st.cache_resource
 def load_tf_model(path):
 	  return tf.keras.models.load_model(path)
 try:
@@ -46,16 +49,11 @@ def chatgpt(input, history):
     print(s)
     s.append(input)
     input = ' '.join(s)
-    output = get_model_answer(input)
+    output = get_model_answer(cahtbot, input)
     history.append((input, output))
     return history, history
 
-# Streamlit App
-st.set_page_config(
-    page_title="Medi-ChatGPT",
-    page_icon=":robot:"
-)
-st.header("GPT-BERT-Medical-QA-Chatbot")
+
 
 history_input = []
 if 'generated' not in st.session_state:
