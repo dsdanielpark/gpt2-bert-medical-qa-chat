@@ -44,7 +44,7 @@ pip install -e .
 streamlit run chatbot.py
 ```
 
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit_app.gif)
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit2.gif)
 
 
 ## Docker
