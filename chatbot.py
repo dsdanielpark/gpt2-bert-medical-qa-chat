@@ -45,16 +45,12 @@ def get_model_answer(cahtbot, user_input):
 
 def chatgpt(input, history):
     history = history or []
-    s = list(sum(history, ()))
-    print(s)
-    s.append(input)
-    input = ' '.join(s)
     output = get_model_answer(cahtbot, input)
-    history.append((input, output))
-    return history, history
+    history.append((output))
+    return history
 
 
-st.session_state
+
 history_input = []
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
@@ -69,12 +65,12 @@ user_input = get_text()
 
 if user_input:
     output = chatgpt(user_input, history_input)
-    history_input.append([user_input, output])
+    history_input.append([output])
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output[0])
 
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
-        message(st.session_state["generated"][i], key=str(i), avatar_style="shapes")
+        message(st.session_state["generated"][i], key=str(i), avatar_style="thumbs")
         message(st.session_state['past'][i],
                 is_user=True, key=str(i) + '_user', avatar_style="thumbs")
