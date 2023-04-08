@@ -19,32 +19,38 @@ Although a few years behind GPT-4, the ultimate goal of this repository is to mi
 
 Additionally, this repository ultimately aims to achieve similar qualitative and quantitative performance as GPT-4 in certain domain areas through model lightweighting and optimization. For more details, please refer to my technical blog.
 
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot.gif)
+
 
 <br>
 
 # Quick Start
 ## Command-Line Interface
 You can chat with the chatbot through the command-line interface using the following command.
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot.gif)
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 python main.py
 ```
-
 ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot.png)
 
+<br>
+
 ## Streamlit application
-A simple application can be implemented with streamlit as follows:
+A simple application can be implemented with streamlit as follows: <br>
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit2.gif)
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
 cd GPT-BERT-Medical-QA-Chatbot
 pip install -e .
 streamlit run chatbot.py
 ```
+![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png)
 
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit2.gif)
+<br>
+
+
 
 
 ## Docker
