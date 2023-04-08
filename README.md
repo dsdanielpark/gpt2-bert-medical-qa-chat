@@ -48,10 +48,15 @@ streamlit run chatbot.py
 ```
 <!-- ![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/streamlit3.png) -->
 
+# Docker
+- Check Docker Hub: https://hub.docker.com/r/parkminwoo91/medical-chatgpt-streamlit-v1
+- 
 ## Build From Docker Image
 ```
 git clone https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot.git
-
+cd GPT-BERT-Medical-QA-Chatbot
+docker build -t chatgpt .
+docker run -p 8501:8501 chatgpt --volume './:/usr/src/app/data'
 ```
 
 ## Build From Docker Compose
