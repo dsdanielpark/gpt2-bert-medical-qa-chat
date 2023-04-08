@@ -15,6 +15,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+from utilfunction import find_path
 
 """
 # Welcome to Streamlit!
@@ -55,7 +56,10 @@ biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params['bert_tok'])
 try:
     question_extractor_model_v1=tf.keras.models.load_model(CONF.chat_params['tf_q_extractor'])
 except Exception as e:
-    print(e)
+    tf_q_extractor_path = find_path("./", "folder", "question_extractor_model")
+    question_extractor_model_v1=tf.keras.models.load_model(tf_q_extractor_path[0])
+else:
+    pass
 df_qa = get_dataset(CONF.chat_params['data'])
 max_answer_len = CONF.chat_params['max_answer_len']
 isEval = CONF.chat_params['isEval']
