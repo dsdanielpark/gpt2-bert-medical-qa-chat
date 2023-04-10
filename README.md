@@ -220,7 +220,7 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 [13] https://chatterbot.readthedocs.io/en/stable/logic/index.html <br>
 [14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/ <br>
 [15] https://blog.streamlit.io/common-app-problems-resource-limits/ <br>
-[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6 <br>
+[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6 <br><BR>
 Lightweight and optimized<br>
 [17] https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html <br>
 [18] https://github.com/juncongmoo/pyllama
