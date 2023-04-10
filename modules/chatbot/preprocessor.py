@@ -36,11 +36,11 @@ def preprocess(text):
     # remove the words betweent brakets ()
     # remove these characters: {'$', ')', '?', '"', '’', '.',  '°', '!', ';', '/', "'", '€', '%', ':', ',', '('}
     # replace these spl characters with space: '\u200b', '\xa0', '-', '/'
-    
+
     text = text.lower()
     text = decontractions(text)
-    text = re.sub('[$)\?"’.°!;\'€%:,(/]', '', text)
-    text = re.sub('\u200b', ' ', text)
-    text = re.sub('\xa0', ' ', text)
-    text = re.sub('-', ' ', text)
+    text = re.sub("[$)\?\"’.°!;'€%:,(/]", "", text)
+    text = re.sub("\u200b", " ", text)
+    text = re.sub("\xa0", " ", text)
+    text = re.sub("-", " ", text)
     return text
