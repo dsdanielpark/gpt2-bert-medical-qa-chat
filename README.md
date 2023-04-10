@@ -11,7 +11,7 @@ git lfs install --skip-smudge &
 export GIT_LFS_SKIP_SMUDGE=1
 ```
 
-![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot_walle.png)
+<!--![](https://github.com/DSDanielPark/GPT-BERT-Medical-QA-Chatbot/blob/main/assets/imgs/medichatbot_walle.png)-->
 
 Since the advent of Chat GPT-4, there have been significant changes in the field. Nevertheless, Chat GPT-2 and Chat GPT-3 continue to be effective in specific domains as large-scale auto-regressive natural language processing models. This repository aims to qualitatively compare the performance of Chat GPT-2 and Chat GPT-4 in the medical domain, and estimate the resources and costs needed for Chat GPT-2 fine-tuning to reach the performance level of Chat GPT-4. Additionally, it seeks to assess how well up-to-date information can be incorporated and applied.
 
