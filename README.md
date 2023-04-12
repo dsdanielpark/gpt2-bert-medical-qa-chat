@@ -1,3 +1,5 @@
+Development Status :: 2 - Pre-Alpha
+
 # GPT-BERT Medical QA Chatbot
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
 [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
