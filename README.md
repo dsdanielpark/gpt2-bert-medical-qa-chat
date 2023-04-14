@@ -1,4 +1,6 @@
-Development Status :: 2 - Pre-Alpha
+Development Status :: 3 - Alpha <br>
+*Copyright (c) 2023 MinWoo Park*
+<br>
 
 # GPT-BERT Medical QA Chatbot
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
