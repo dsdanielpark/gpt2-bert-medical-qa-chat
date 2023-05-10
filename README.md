@@ -205,6 +205,12 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 
 <br>
 
+## Remark
+I have trained the model for 2 epochs using the mentioned dataset, utilizing 30 computing units from Google Colab Pro. The training process took approximately 12 hours. In the case of relatively simple question extractor or answer extractor models that perform summarization and indexing, the time required for training is minimal, and they are included in the inference module to evaluate whether the learning has been carried out appropriately. If the model is only responding to simple questions, the inference module should be changed; 
+however, it is currently included in the evaluation unnecessarily to check performance and calculate the time and resources consumed. I plan to update this information once sufficient training is completed (by incorporating additional datasets), or when funding for experiments and resources to derive adequate learning through few-shot methods becomes available. This will be presented in a sophisticated manner suitable for GitHub.
+
+<br>
+
 # References
 [1] https://arxiv.org/abs/1706.03762 <br>
 [2] https://arxiv.org/abs/1810.04805 <br>
