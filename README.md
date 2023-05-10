@@ -207,7 +207,7 @@ Since the nvidia GPU driver fully supports wsl2, the method of supporting Tensor
 
 ## Remark
 I have trained the model for 2 epochs using the mentioned dataset, utilizing 40 computing units from Google Colab Pro. The training was conducted for about 12 hours using an A100 multi-GPU with 56 GB of RAM or more. In the case of relatively simple question extractor or answer extractor models that perform summarization and indexing, the time required for training is minimal, and they are included in the inference module to evaluate whether the learning has been carried out appropriately. If the model is only responding to simple questions, the inference module should be changed; 
-however, it is currently included in the evaluation unnecessarily to check performance and calculate the time and resources consumed. I plan to update this information once sufficient training is completed (by incorporating additional datasets), or when funding for experiments and resources to derive adequate learning through few-shot methods becomes available. This will be presented in a sophisticated manner suitable for GitHub. <br>
+however, it is currently included in the evaluation unnecessarily to check performance and calculate the time and resources consumed. I plan to update this information once sufficient training is completed (by incorporating additional datasets), or when funding for experiments and resources to derive adequate learning. <br>
 
 - Training 2 Epoch with `MQuAD` dataset, Comsuming 40 Google Colab Pro Computing unit, Take 12 hours using an A100 multi-GPU with 56 GB of RAM or more.
 
