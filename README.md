@@ -183,6 +183,20 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 ```
 <br>
 
+
+# How to Cite this Project
+```BibTex
+@misc{medical_qa_bert_chatgpt,
+      title  = {Medical QA Bert Chat GPT}, 
+      author = {Minwoo Park},
+      year   = {2023},
+      url    = {https://github.com/dsdanielpark/medical-qa-bert-chatgpt},
+}
+```
+
+
+<br>
+
 # Tips
 
 ## About data handling
