@@ -184,7 +184,7 @@ I temporarily share TensorFlow model weights through my personal Google Drive.
 <br>
 
 
-# How to Cite this Project
+# How to cite this project
 ```BibTex
 @misc{medical_qa_bert_chatgpt,
       title  = {Medical QA Bert Chat GPT}, 
