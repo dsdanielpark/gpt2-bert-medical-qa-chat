@@ -23,7 +23,7 @@ Although a few years behind GPT-4, the ultimate goal of this repository is to mi
 
 Additionally, this repository ultimately aims to achieve similar qualitative and quantitative performance as GPT-4 in certain domain areas through model lightweighting and optimization. For more details, please refer to my technical blog.
 
-- Keywords: GPT-2, Streamlit, Vector DB, Medical
+*Keywords: GPT-2, Streamlit, Vector DB, Medical*
 
 <br><br><br><br><br><br>
 
