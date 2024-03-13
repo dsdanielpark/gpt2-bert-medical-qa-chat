@@ -6,7 +6,6 @@ openai.api_key = YOUR_API_KEY
 
 st.set_page_config(page_title="Chat GPT API EXAMPLE", page_icon=":tada:", layout="wide")
 
-# ---- Header ----
 st.subheader(
     """
                 This is Test Landing Page

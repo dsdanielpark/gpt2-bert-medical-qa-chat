@@ -10,18 +10,17 @@ from utilfunction import find_path
 # Streamlit App
 st.header("GPT-BERT-Medical-QA-Chatbot")
 
-
+# Load necessary models and data
 gpt2_tokenizer = GPT2Tokenizer.from_pretrained(CONF.chat_params["gpt_tok"])
 medi_qa_chatGPT2 = TFGPT2LMHeadModel.from_pretrained(CONF.chat_params["tf_gpt_model"])
 biobert_tokenizer = AutoTokenizer.from_pretrained(CONF.chat_params["bert_tok"])
 df_qa = get_dataset(CONF.chat_params["data"])
 max_answer_len = CONF.chat_params["max_answer_len"]
 isEval = CONF.chat_params["isEval"]
-
-# Get answer index from Answer from FFNN embedding column.
 answer_index = get_bert_index(df_qa, "A_FFNN_embeds")
 
-# using cache decorator
+
+# Load question extractor model
 @st.cache_resource
 def load_tf_model(path):
     return tf.keras.models.load_model(path)
@@ -40,11 +39,9 @@ try:
 except Exception as e:
     tf_q_extractor_path = find_path("./", "folder", "question_extractor_model")
     question_extractor_model_v1 = load_tf_model(tf_q_extractor_path[0])
-else:
-    pass
 
-# Make chatbot inference object
-cahtbot = Inferencer(
+# Initialize chatbot inferencer
+chatbot = Inferencer(
     medi_qa_chatGPT2,
     biobert_tokenizer,
     gpt2_tokenizer,
@@ -55,17 +52,20 @@ cahtbot = Inferencer(
 )
 
 
-def get_model_answer(cahtbot, user_input):
-    return cahtbot.run(user_input, isEval)
+# Function to get model's answer
+def get_model_answer(chatbot, user_input):
+    return chatbot.run(user_input, isEval)
 
 
+# Function to interact with chatbot
 def chatgpt(input, history):
     history = history or []
-    output = get_model_answer(cahtbot, input)
-    history.append((output))
+    output = get_model_answer(chatbot, input)
+    history.append(output)
     return history
 
 
+# Maintain user input history
 history_input = []
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -73,16 +73,18 @@ if "past" not in st.session_state:
     st.session_state["past"] = []
 
 
+# Function to get user input
 def get_text():
     input_text = st.text_input("You: ", key="input")
     return input_text
 
 
+# Main interaction loop
 user_input = get_text()
 
 if user_input:
     output = chatgpt(user_input, history_input)
-    history_input.append([output])
+    history_input.append(output)
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output[0])
 

@@ -23,26 +23,31 @@ Although a few years behind GPT-4, the ultimate goal of this repository is to mi
 
 Additionally, this repository ultimately aims to achieve similar qualitative and quantitative performance as GPT-4 in certain domain areas through model lightweighting and optimization. For more details, please refer to my technical blog.
 
-
+- Keywords: GPT-2, Streamlit, Vector DB, Medical
 
 <br><br><br><br><br><br>
 
 # Contents
-- [GPT-BERT Medical QA Chatbot](#medical-qa-bert-chatgpt)
+- [GPT-BERT Medical QA Chatbot](#gpt-bert-medical-qa-chatbot)
+- [Contents](#contents)
 - [Quick Start](#quick-start)
-  * [Command-Line Interface](#command-line-interface)
-  * [Streamlit application](#streamlit-application)
+  - [Command-Line Interface](#command-line-interface)
+  - [Streamlit application](#streamlit-application)
 - [Docker](#docker)
-  * [Build from Docker Image](#build-from-docker-image)
-  * [Build from Docker Compose](#build-from-docker-compose)
-  * [Build from Docker Hub](#build-from-docker-hub)
-  * [Pre-trained model infomation](#pre-trained-model-infomation)
+  - [Build from Docker Image](#build-from-docker-image)
+        - [Since git clone downloads what needs to be downloaded from git-lfs, the volume must be mounted as follows. Or modify `chatbot/config.py` to mount to a different folder.](#since-git-clone-downloads-what-needs-to-be-downloaded-from-git-lfs-the-volume-must-be-mounted-as-follows-or-modify-chatbotconfigpy-to-mount-to-a-different-folder)
+  - [Build from Docker Compose](#build-from-docker-compose)
+  - [Build from Docker Hub](#build-from-docker-hub)
+          - [Streamlit is very convenient and quick to view landing pages, but lacks design flexibility and lacks control over the application layout. Also, if your application or data set is large, the entire source code will be re-run on every new change or interaction, so application flow can cause speed issues. That landing page will be replaced by flask with further optimizations. Streamlit chatbot has been recently developed, so it seems difficult to have the meaning of a simple demo now.](#streamlit-is-very-convenient-and-quick-to-view-landing-pages-but-lacks-design-flexibility-and-lacks-control-over-the-application-layout-also-if-your-application-or-data-set-is-large-the-entire-source-code-will-be-re-run-on-every-new-change-or-interaction-so-application-flow-can-cause-speed-issues-that-landing-page-will-be-replaced-by-flask-with-further-optimizations-streamlit-chatbot-has-been-recently-developed-so-it-seems-difficult-to-have-the-meaning-of-a-simple-demo-now)
+  - [Pre-trained model infomation](#pre-trained-model-infomation)
 - [Dataset](#dataset)
 - [Pretrained Models](#pretrained-models)
 - [Cites](#cites)
+- [How to cite this project](#how-to-cite-this-project)
 - [Tips](#tips)
-  * [About data handling](#about-data-handling)
-  * [About Tensorflow-GPU handling](#about-tensorflow-gpu-handling)
+  - [About data handling](#about-data-handling)
+  - [About Tensorflow-GPU handling](#about-tensorflow-gpu-handling)
+  - [Remark](#remark)
 - [References](#references)
 
 <br><br><br><br><br><br>
@@ -228,26 +233,21 @@ however, it is currently included in the evaluation unnecessarily to check perfo
 <br>
 
 # References
-[1] https://arxiv.org/abs/1706.03762 <br>
-[2] https://arxiv.org/abs/1810.04805 <br>
-[3] https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf <br>
-[4] https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0 <br>
-[5] https://github.com/ash3n/DocProduct#start-of-content <br>
-
-<details>
-<summary> See more...</summary>
-[6] https://appliedaicourse.com <br>
-[7] https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f <br>
-[8] https://github.com/LasseRegin/medical-question-answer-data <br>
-[9] https://huggingface.co/gpt2 <br>
-[10] https://github.com/AI-Yash/st-chat <br>
-[11] https://streamlit.io/ <br>
-[12] https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker <br>
-[13] https://chatterbot.readthedocs.io/en/stable/logic/index.html <br>
-[14] https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/ <br>
-[15] https://blog.streamlit.io/common-app-problems-resource-limits/ <br>
-[16] https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6 <br>
-Lightweight and optimized<br>
-[17] https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html <br>
-[18] https://github.com/juncongmoo/pyllama
-</details>
+1. [Paper: Attention is All You Need](https://arxiv.org/abs/1706.03762)
+2. [Paper: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+3. [Paper: GPT-2: Language Models are Unsupervised Multitask Learners](https://arxiv.org/ftp/arxiv/papers/1901/1901.08746.pdf)
+4. [Paper: Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/languagemodels.pdf%C2%A0)
+5. [GitHub Repository: DocProduct](https://github.com/ash3n/DocProduct#start-of-content)
+6. [Applied AI Course](https://appliedaicourse.com)
+7. [Medium Article: Medical Chatbot using BERT and GPT-2](https://suniljammalamadaka.medium.com/medical-chatbot-using-bert-and-gpt2-62f0c973162f)
+8. [GitHub Repository: Medical Question Answer Data](https://github.com/LasseRegin/medical-question-answer-data)
+9. [Hugging Face Model Hub: GPT-2](https://huggingface.co/gpt2)
+10. [GitHub Repository: Streamlit Chat](https://github.com/AI-Yash/st-chat)
+11. [Streamlit Documentation](https://streamlit.io/)
+12. [Streamlit Tutorial: Deploying Streamlit Apps with Docker](https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker)
+13. [ChatterBot Documentation](https://chatterbot.readthedocs.io/en/stable/logic/index.html)
+14. [Blog Post: 3 Steps to Fix App Memory Leaks](https://blog.streamlit.io/3-steps-to-fix-app-memory-leaks/)
+15. [Blog Post: Common App Problems & Resource Limits](https://blog.streamlit.io/common-app-problems-resource-limits/)
+16. [GitHub Gist: Streamlit Chatbot Example](https://gist.github.com/DSDanielPark/5d34b2f53709a7007b0d3a5e9f23c0a6) (Lightweight and optimized)
+17. [Databricks Blog: Democratizing Magic: ChatGPT and Open Models](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html)
+18. [GitHub Repository: Pyllama](https://github.com/juncongmoo/pyllama)

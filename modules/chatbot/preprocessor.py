@@ -1,46 +1,34 @@
 import re
+from modules.chatbot.const import CONTRACTIONS
 
 
-def decontractions(phrase):
-    """decontracted takes text and convert contractions into natural form.
-     ref: https://stackoverflow.com/questions/19790188/expanding-english-language-contractions-in-python/47091490#47091490"""
-    # specific
-    phrase = re.sub(r"won\'t", "will not", phrase)
-    phrase = re.sub(r"can\'t", "can not", phrase)
-    phrase = re.sub(r"won\’t", "will not", phrase)
-    phrase = re.sub(r"can\’t", "can not", phrase)
+def decontracted(phrase):
+    """
+    Decontract a phrase.
 
-    # general
-    phrase = re.sub(r"n\'t", " not", phrase)
-    phrase = re.sub(r"\'re", " are", phrase)
-    phrase = re.sub(r"\'s", " is", phrase)
-    phrase = re.sub(r"\'d", " would", phrase)
-    phrase = re.sub(r"\'ll", " will", phrase)
-    phrase = re.sub(r"\'t", " not", phrase)
-    phrase = re.sub(r"\'ve", " have", phrase)
-    phrase = re.sub(r"\'m", " am", phrase)
-    phrase = re.sub(r"n\’t", " not", phrase)
-    phrase = re.sub(r"\’re", " are", phrase)
-    phrase = re.sub(r"\’s", " is", phrase)
-    phrase = re.sub(r"\’d", " would", phrase)
-    phrase = re.sub(r"\’ll", " will", phrase)
-    phrase = re.sub(r"\’t", " not", phrase)
-    phrase = re.sub(r"\’ve", " have", phrase)
-    phrase = re.sub(r"\’m", " am", phrase)
+    Args:
+        phrase (str): The input phrase.
 
+    Returns:
+        str: Decontracted phrase.
+    """
+    for key, value in CONTRACTIONS.items():
+        phrase = phrase.replace(key, value)
     return phrase
 
 
 def preprocess(text):
-    # convert all the text into lower letters
-    # remove the words betweent brakets ()
-    # remove these characters: {'$', ')', '?', '"', '’', '.',  '°', '!', ';', '/', "'", '€', '%', ':', ',', '('}
-    # replace these spl characters with space: '\u200b', '\xa0', '-', '/'
+    """
+    Preprocess text.
 
+    Args:
+        text (str): The input text.
+
+    Returns:
+        str: Preprocessed text.
+    """
     text = text.lower()
-    text = decontractions(text)
-    text = re.sub("[$)\?\"’.°!;'€%:,(/]", "", text)
-    text = re.sub("\u200b", " ", text)
-    text = re.sub("\xa0", " ", text)
-    text = re.sub("-", " ", text)
+    text = decontracted(text)
+    text = re.sub(r"[$)\?\"’.°!;'€%:,(/]", "", text)
+    text = re.sub(r"\u200b|\xa0|-", " ", text)
     return text

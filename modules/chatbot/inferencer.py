@@ -1,20 +1,33 @@
-from nltk.translate.bleu_score import sentence_bleu
-from modules.chatbot.preprocessor import *
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
+from typing import List
+from nltk.translate.bleu_score import sentence_bleu
+from modules.chatbot.preprocessor import preprocess
 
 
 class Inferencer:
     def __init__(
         self,
-        medical_qa_gpt_model,
-        bert_tokenizer,
-        gpt_tokenizer,
-        question_extractor_model,
-        df_qa,
-        answer_index,
-        answer_len,
+        medical_qa_gpt_model: tf.keras.Model,
+        bert_tokenizer: tf.keras.preprocessing.text.Tokenizer,
+        gpt_tokenizer: tf.keras.preprocessing.text.Tokenizer,
+        question_extractor_model: tf.keras.Model,
+        df_qa: pd.DataFrame,
+        answer_index: faiss.IndexFlatIP,
+        answer_len: int,
     ) -> None:
+        """
+        Initialize Inferencer with necessary components.
+
+        Args:
+            medical_qa_gpt_model (tf.keras.Model): Medical Q&A GPT model.
+            bert_tokenizer (tf.keras.preprocessing.text.Tokenizer): BERT tokenizer.
+            gpt_tokenizer (tf.keras.preprocessing.text.Tokenizer): GPT tokenizer.
+            question_extractor_model (tf.keras.Model): Question extractor model.
+            df_qa (pd.DataFrame): DataFrame containing Q&A pairs.
+            answer_index (faiss.IndexFlatIP): FAISS index for answers.
+            answer_len (int): Length of the answer.
+        """
         self.biobert_tokenizer = bert_tokenizer
         self.question_extractor_model = question_extractor_model
         self.answer_index = answer_index
@@ -23,7 +36,19 @@ class Inferencer:
         self.df_qa = df_qa
         self.answer_len = answer_len
 
-    def get_gpt_inference_data(self, question, question_embedding):
+    def get_gpt_inference_data(
+        self, question: str, question_embedding: np.ndarray
+    ) -> List[int]:
+        """
+        Get GPT inference data.
+
+        Args:
+            question (str): Input question.
+            question_embedding (np.ndarray): Embedding of the question.
+
+        Returns:
+            List[int]: GPT inference data.
+        """
         topk = 20
         scores, indices = self.answer_index.search(
             question_embedding.astype("float32"), topk
@@ -41,26 +66,30 @@ class Inferencer:
                 break
         return self.gpt_tokenizer.encode(line)[-1024:]
 
-    def get_gpt_answer(self, question, answer_len):
+    def get_gpt_answer(self, question: str, answer_len: int) -> str:
+        """
+        Get GPT answer.
+
+        Args:
+            question (str): Input question.
+            answer_len (int): Length of the answer.
+
+        Returns:
+            str: GPT generated answer.
+        """
         preprocessed_question = preprocess(question)
-        question_len = len(preprocessed_question.split(" "))
-        truncated_question = preprocessed_question
-        if question_len > 500:
-            truncated_question = " ".join(preprocessed_question.split(" ")[:500])
-        encoded_question = self.biobert_tokenizer.encode(truncated_question)
-        max_length = 512
-        padded_question = tf.keras.preprocessing.sequence.pad_sequences(
-            [encoded_question], maxlen=max_length, padding="post"
+        truncated_question = (
+            " ".join(preprocessed_question.split(" ")[:500])
+            if len(preprocessed_question.split(" ")) > 500
+            else preprocessed_question
         )
-        question_mask = [
-            [1 if token != 0 else 0 for token in question]
-            for question in padded_question
-        ]
+        encoded_question = self.biobert_tokenizer.encode(truncated_question)
+        padded_question = tf.keras.preprocessing.sequence.pad_sequences(
+            [encoded_question], maxlen=512, padding="post"
+        )
+        question_mask = np.where(padded_question != 0, 1, 0)
         embeddings = self.question_extractor_model(
-            {
-                "question": np.array(padded_question),
-                "question_mask": np.array(question_mask),
-            }
+            {"question": padded_question, "question_mask": question_mask}
         )
         gpt_input = self.get_gpt_inference_data(truncated_question, embeddings.numpy())
         mask_start = len(gpt_input) - list(gpt_input[::-1]).index(4600) + 1
@@ -77,38 +106,50 @@ class Inferencer:
         answer = gpt2_output.rindex("`ANSWER: ")
         return gpt2_output[answer + len("`ANSWER: ") :]
 
-    def inf_func(self, question):
+    def inf_func(self, question: str) -> str:
+        """
+        Run inference for the given question.
+
+        Args:
+            question (str): Input question.
+
+        Returns:
+            str: Generated answer.
+        """
         answer_len = self.answer_len
         return self.get_gpt_answer(question, answer_len)
 
-    def eval_func(self, question, answer):
-        print(f"Q for eval func: {question}")
-        print(f"A for eval func: {answer}")
+    def eval_func(self, question: str, answer: str) -> float:
+        """
+        Evaluate generated answer against ground truth.
+
+        Args:
+            question (str): Input question.
+            answer (str): Generated answer.
+
+        Returns:
+            float: BLEU score.
+        """
         answer_len = 20
         generated_answer = self.get_gpt_answer(question, answer_len)
         reference = [answer.split(" ")]
         candidate = generated_answer.split(" ")
-        print(f"C for eval func: {candidate}")
         score = sentence_bleu(reference, candidate)
-
-        bleu_1gram = sentence_bleu(reference, candidate, weights=(1, 0, 0, 0))
-        bleu_2gram = sentence_bleu(reference, candidate, weights=(0, 1, 0, 0))
-        bleu_3gram = sentence_bleu(reference, candidate, weights=(0, 0, 1, 0))
-        bleu_4gram = sentence_bleu(reference, candidate, weights=(0, 0, 0, 1))
-
-        print(f"reference: {reference}")
-        print(f"candidate: {candidate}")
-        print(f"1-Gram BLEU: {bleu_1gram:.2f}")
-        print(f"2-Gram BLEU: {bleu_2gram:.2f}")
-        print(f"3-Gram BLEU: {bleu_3gram:.2f}")
-        print(f"4-Gram BLEU: {bleu_4gram:.2f}")
-
         return score
 
-    def run(self, question, isEval):
+    def run(self, question: str, isEval: bool) -> str:
+        """
+        Run inference for the given question.
+
+        Args:
+            question (str): Input question.
+            isEval (bool): Whether to evaluate or not.
+
+        Returns:
+            str: Generated answer.
+        """
         answer = self.inf_func(question)
         if isEval:
             bleu_score = self.eval_func(question, answer)
             print(f"The sentence_bleu score is {bleu_score}")
-
         return answer
